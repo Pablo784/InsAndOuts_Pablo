@@ -1,8 +1,11 @@
-// This is Assignment 4 for MTEC 2280 (SPRING 2022) (RESUBMITTED)
+// This is Assignment 4 for MTEC 2280 (SPRING 2022) (RESUBMITTED...AGAIN)
 
 // Pablo Vasquez : One of my Favorite JDM Cars
 
 // Do you like JDM cars or cars in general? Run the sketch and find out for yourself
+
+// Also, there is a spinning yellow circle on the corner of the screen
+// click on it and see what happens
 
 // I use the code from Week 4 in our class repo on Github 
 // & past code to help me out
@@ -71,4 +74,11 @@ ellipse(x,y,100,100);
 angle +=speed;
 scalar += speed;
 
+}
+
+void mousePressed() {
+  stroke(0);
+  fill(200);
+  ellipseMode(CORNER);
+  ellipse(mouseX,mouseY,20,20);
 }
