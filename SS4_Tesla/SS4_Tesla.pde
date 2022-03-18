@@ -4,8 +4,8 @@
 
 // Run the sketch to see a car.. of the future created by Elon Musk
 
-// Also, there is a spinning yellow circle on the corner of the screen
-// click on it and see what happens
+// Also, there is a spinning black circle on the corner of the screen
+// and a circle which you can play with r
 
 // I use the code from Week 4 in our class repo on Github 
 // & past code to help me out
@@ -36,17 +36,20 @@ void setup() {
   
   
   
-  tesla = loadImage("tesla.jpg");
+  tesla = loadImage("tesla.png");
 }
 
 void draw() {
-  
-  
   background(r,g,b);
   r = random(50);
   g = random(50);
   b = random(50);
-
+  stroke(255);
+  fill(frameCount/5);
+  ellipseMode(CENTER);
+  
+  ellipse(width/4,height/4,mouseX + 20, mouseY + 20);
+  
 
 
   fill(opacity);
@@ -56,7 +59,7 @@ void draw() {
     fade = -fade;
   }
   
-  fill(237,255,0);
+  fill(255);
   text("An Electric Car!", width/4, height/4, -50);
   
   if (opacity > 255 || opacity < 0) {
@@ -74,11 +77,4 @@ ellipse(x,y,100,100);
 angle +=speed;
 scalar += speed;
 
-}
-
-void mousePressed() {
-  stroke(0);
-  fill(200);
-  ellipseMode(CORNER);
-  ellipse(mouseX,mouseY,20,20);
 }
