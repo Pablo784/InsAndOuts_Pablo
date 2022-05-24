@@ -24,12 +24,11 @@ int value = 0;
 
 void setup() {
   pinMode(LED,OUTPUT);
-  pinMode(piezo,OUTPUT);
   Serial.begin(9600);
 }
 
 void loop() {
-  reading = analogRead(sensor);
+ reading = analogRead(sensor);
   analogWrite(LED,reading/4);
   val = analogRead(sensor);
   val = val/4;
